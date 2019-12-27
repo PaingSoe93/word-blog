@@ -322,6 +322,7 @@
             page = pageNum
             let skip = (pageNum - 1) * 9
             let output = ""
+            let hashTag = ["Travel", "Nature", "Forest", "Asia", "Europe"]
             
             $.each(viewData.slice(skip, page * 9), function (key, val) {
 
@@ -337,13 +338,13 @@
         
                         <div class="item-entry__text">    
                             <div class="item-entry__cat">
-                                <a href="category.html">Design</a> 
+                                <a href="category.html">${hashTag[key%5]}</a> 
                             </div>
     
                             <h1 class="item-entry__title"><a href="single-standard.html?page_key=${key+skip}">${val.title}</a></h1>
                                 
                             <div class="item-entry__date">
-                                <a href="single-standard.html">June 15, 2019</a>
+                                <a href="single-standard.html">June ${key+1+skip}, 2019</a>
                             </div>
                            
                         </div>
