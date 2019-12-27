@@ -320,17 +320,17 @@
         page = 1
         function bindData(pageNum, data) {
             page = pageNum
-            let skip = (pageNum - 1) * 8
+            let skip = (pageNum - 1) * 9
             let output = ""
             
-            $.each(viewData.slice(skip, page * 8), function (key, val) {
+            $.each(viewData.slice(skip, page * 9), function (key, val) {
 
                 output += `
                  <article class="col-block">
                     
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
-                            <a href="single-standard.html" class="item-entry__thumb-link">
+                            <a href="single-standard.html?page_key=${key+skip}" class="item-entry__thumb-link">
                                 <img src="img/${val.image_name}"  alt="">
                             </a>
                         </div>
@@ -340,7 +340,7 @@
                                 <a href="category.html">Design</a> 
                             </div>
     
-                            <h1 class="item-entry__title"><a href="single-standard.html?page_key=${key}">${val.title}</a></h1>
+                            <h1 class="item-entry__title"><a href="single-standard.html?page_key=${key+skip}">${val.title}</a></h1>
                                 
                            
                         </div>
