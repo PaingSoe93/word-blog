@@ -88,75 +88,6 @@
     </header> <!-- s-header -->
 
 
-    <!-- featured 
-    ================================================== -->
-    <section class="s-featured">
-        <div class="row">
-            <div class="col-full">
-
-                <div class="featured-slider featured" data-aos="zoom-in">
-
-                    <div class="featured__slide">
-
-                        <div class="entry">
-
-                            <div class="entry__background"
-                                style="background-image:url('images/thumbs/featured/featured-watch.jpg');"></div>
-
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Holiday</a></span>
-
-                                <h1><a href="#0" title="">Love your holiday and make memories.</a></h1>
-
-                            </div> <!-- end entry__content -->
-
-                        </div> <!-- end entry -->
-
-                    </div> <!-- end featured__slide -->
-                    
-                    <div class="featured__slide">
-                        <div class="entry">
-
-                            <div class="entry__background"
-                                style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');"></div>
-
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Music</a></span>
-
-                                <h1><a href="#0" title="">What Your Music Preference Says About You and Your
-                                        Personality.</a></h1>
-
-                            </div> <!-- end entry__content -->
-
-                        </div> <!-- end entry -->
-                    </div> <!-- end featured__slide -->
-
-                    <div class="featured__slide">
-
-                        <div class="entry">
-
-                            <div class="entry__background"
-                                style="background-image:url('images/thumbs/featured/featured-beetle.jpg');"></div>
-
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">LifeStyle</a></span>
-
-                                <h1><a href="#0" title="">The difference between Classics, Vintage & Antique Cars.</a>
-                                </h1>
-
-                            </div> <!-- end entry__content -->
-
-                        </div> <!-- end entry -->
-
-                    </div> <!-- end featured__slide -->
-
-                </div> <!-- end featured -->
-
-            </div> <!-- end col-full -->
-        </div>
-    </section> <!-- end s-featured -->
-
-
     <!-- s-content
     ================================================== -->
     <section class="s-content">
@@ -294,11 +225,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         page = 1
         function bindData(pageNum, data) {
             page = pageNum
-            let skip = (pageNum - 1) * 9
+            let skip = (pageNum - 1) * 14
             let output = ""
             let hashTag = ["Travel", "Nature", "Beautiful", "Holiday", "Explore"]
             
-            $.each(viewData.slice(skip, page * 9), function (key, val) {
+            $.each(viewData.slice(skip, page * 14), function (key, val) {
 
                 output += `
                  <article class="col-block">
@@ -348,7 +279,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             var totalPage = 0
             $.getJSON('./simpledata.json', function (data) {
                 viewData = data
-                let limitPage = Math.ceil(data.length / 9)
+                let limitPage = Math.ceil(data.length / 14)
                 
                 let pager = `<li><a class="pgn__prev" href="#Data-Display" onClick="prevPage()">Prev</a></li>`
                 for (i = 1; i <= limitPage; i++) {
