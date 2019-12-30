@@ -225,11 +225,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         page = 1
         function bindData(pageNum, data) {
             page = pageNum
-            let skip = (pageNum - 1) * 14
+            let skip = (pageNum - 1) * 15
             let output = ""
             let hashTag = ["Travel", "Nature", "Beautiful", "Holiday", "Explore"]
             
-            $.each(viewData.slice(skip, page * 14), function (key, val) {
+            $.each(viewData.slice(skip, page * 15), function (key, val) {
 
                 output += `
                  <article class="col-block">
@@ -279,7 +279,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             var totalPage = 0
             $.getJSON('./simpledata.json', function (data) {
                 viewData = data
-                let limitPage = Math.ceil(data.length / 14)
+                let limitPage = Math.ceil(data.length / 15)
                 
                 let pager = `<li><a class="pgn__prev" href="#Data-Display" onClick="prevPage()">Prev</a></li>`
                 for (i = 1; i <= limitPage; i++) {
