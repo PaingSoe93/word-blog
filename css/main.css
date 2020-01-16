@@ -223,6 +223,39 @@ p.lead {
 
 }
 
+/* ---start ads css--- */
+.responsive-ad-wrapper,
+.responsive-ad {
+  width: 728px;
+  height: 90px;
+}
+@media screen and (max-width: 768px) {
+  .responsive-ad-wrapper,
+  .responsive-ad {
+    width: 336px;
+    height: 280px;
+  }
+  .responsive-ad-wrapper {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .responsive-ad-wrapper,
+  .responsive-ad {
+    width: 336px;
+    height: 280px;
+  }
+  .responsive-ad-wrapper {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+}
+/* --- end ads css --- */
+
 em, i, strong, b {
   font-size: inherit;
   line-height: inherit;
